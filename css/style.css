@@ -1,11 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=Bubbler+One&family=Castoro:ital@0;1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 *{
   margin: 0px;
   padding: 0px;
   box-sizing: border-box;
-  font-family: 'Castoro', sans-serif;
+  font-family: 'Poppins', sans-serif;
 }
+
 body {
     display: grid;
     place-items: center;
@@ -14,109 +15,249 @@ body {
 }
 
 header {
-    /* border: 3px blue solid; */
-    background-color: rgb(0, 0, 0);
+    background-color: #175AF4;
     color: white;
     width: 100%;
     height: 15vh;
 }
 
-body .header .titulo{
-    width:100%;
-    height: 80%;
-    margin: 10px 0 10px 0;
+body .header .titulo {
+    margin-left: 10px;
+    font-size: 40px;
+    font-weight: 800;
     color: white;
     cursor: pointer;
-    /* border:3px brown solid; */
-    display: grid;
-    place-items: center;
+    transition: 0.3s ease;
 }
+
+body .header .titulo span {
+    font-size: 40px;
+    color: #39FF84;
+    font-weight: 800;
+}
+
+body .header .titulo:hover {
+    transform: scale(1.1);
+}
+
 body .header .menu{
     width: 100%;
     height: 50%;
     margin: 10px 0 10px 0;
-    /* border: 2px yellow solid; */
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     
 }
-body .header .menu .botton-menu{
-    width: 10%;
-    height: 100%;
-    color: rgb(255, 255, 255);
-    display: grid;
-    place-items: center;
-    margin: 0 10px 0 10px;
+
+body .header .menu .botton-menu {
+    font-size: 18px;
+    margin-right: 40px;
+    font-weight: 500;
+    color: white;
+    transition: 0.3s ease;
+    margin: 0 10 0 10px;
     cursor: pointer;
-    /* border: 2px blue solid; */
 }
 
-body .header .menu .botton-menu:hover{
-    color: rgb(171, 162, 255);
+body .header .menu .botton-menu:hover {
+    color: #39FF84;
 }
+
+body .presentation h1 {
+    font-size: 50px;
+    font-weight: 700;
+    margin-top: 80px;
+    line-height: 1;
+}
+
+body .presentation {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    margin: center;
+
+}
+
+body .presentation h5 {
+    font-size: 80px;
+    font-weight: 700;
+    margin-bottom: 40px;
+    margin-top: 20px;
+}
+
+body .presentation .animation {
+    font-size: 34px ;
+    font-weight: 600;
+    min-width: 280px;
+}
+
+body .presentation .animation span {
+    position: relative;
+}
+
+body .presentation .animation span::before {
+    content: 'Desarrolladores Frontend';
+    color: #175AF4;
+    animation: words 20s infinite;
+}
+
+body .presentation .animation span::after {
+    content: "";
+    background-color: var(--bg-color);
+    position: absolute;
+    width: calc(100% + 80px);
+    height: 100%;
+    border-left: 3px solid #175AF4;
+    right: -8px;
+    animation: cursor 0.6s infinite, typing 20s steps(14) infinite;
+}
+
+@keyframes cursor{
+    to{
+        border-left: 2px solid var(--main-color);
+    }
+}
+
+@keyframes words{
+    0%,
+    20%{
+        content: 'Desarrolladores Frontend';
+    }
+    21%,
+    40%{
+        content: 'Desarrolladores de Aplicaciones Web';
+    }
+    41%,
+    60%{
+        content: 'Blogueros';
+    }
+    61%,
+    80%{
+        content: 'Programadores en C++';
+    }
+    81%,
+    100%{
+        content: '';
+    }
+}
+
+@keyframes typing{
+    10%,
+    15%,
+    30%,
+    35%,
+    50%,
+    55%,
+    70%,
+    75%,
+    90%,
+    95%{
+        width: 0;
+    }
+    5%,
+    20%,
+    25%,
+    40%,
+    45%,
+    60%,
+    65%,
+    80%,
+    85%{
+        width: calc(100% + 8px);
+    }
+}
+
 body .master-box {
-    border: 3px red solid;
     width: 100%;
     height: 100%;
     display: grid;
     place-items: center;
     overflow: scroll;
 }
+
 body .master-box .box{
-    border: 3x black solid;
     width: 80%;
     height: 100%;
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 20px;
     padding-top: 50px;
 }
 
-body .master-box .box .contenidos .contain{
-    width: 90%;
-    height: 150px;
-    border: 3px skyblue solid;
-    margin: 10px 0 10px 0;
+body .master-box .box .contenidos .contain {
+    width: 100%;
+    height: auto;
+    margin: 10px 0;
 }
 
-body .master-box .box .contenidos .contain .parrafo .imagen{
-    /* border: 3px rgb(112, 224, 112) solid; */
-    width: 55%;
-    height: 130px;
+body .master-box .box .contenidos .article h2 {
+    font-size: 28px;
+    color: #13131F;
+    margin-bottom: 10px;
+}
+
+body .master-box .box .contenidos .contain .post-1 {
+    width: 100%;
     display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    box-sizing: border-box;
+}
+
+body .master-box .box .contenidos .contain .post-1 h3 {
+    font-size: 18px;
+    color: #175AF4;
+    margin-bottom: 10px;
+}
+
+body .master-box .box .contenidos .contain .post-1 p {
+    width: 100%;
+    font-size: 15px;
+    color: #13131F;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    box-sizing: border-box;
+ }
+
+body .master-box .box .contenidos .contain .post-1 p .imagen {
+    width: 30%;
+    height: auto;
     cursor: pointer;
 }
 
-body .master-box .box .contenidos .contain .imagen:hover{
+body .master-box .box .contenidos .contain .post-1 p .imagen:hover {
     opacity: 0.9;
 }
 
-body .master-box .box .contenidos .contain .parrafo{
-    /* border: 3px green solid; */
-    width: 100%;
-    height: 150px;
-    display: flex;
-    place-items: center;
+body .master-box .box .contenidos {
+    width: 70%;
+    display: grid;
+    place-items: flex-start;
 }
 
-body .master-box .box .contenidos{
-    border: 3px black solid;
-    width: 70%;
-    height: 100%;
-    display: grid;
-    place-items: center;
-    /* overflow-y: auto; */
+body .master-box .box .barra-edge {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    box-sizing: border-box;
 }
-body .master-box .box .barra-edge{
-    border: 3px green solid;
-    width: 30%;
-    height: 100%;
-    display: grid;
-    place-items: center;
+
+body .master-box .box .item h4 {
+    font-size: 18px;
+    color: #39FF84;
+    margin-bottom: 10px;
 }
-body .master-box .box .item{
-    width: 80%;
-    height: 70px;
-    border: 3px rgb(235, 135, 227) solid;
-    margin: 10px 0 10px 0;
+
+body .master-box .box .item h4 p {
+    width: 100%;
+    color: #13131F;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    box-sizing: border-box;
 }
