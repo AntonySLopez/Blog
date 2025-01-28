@@ -1,0 +1,192 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: grid;
+    place-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+header {
+    background-color: #175AF4;
+    color: white;
+    width: 100%;
+    height: 15vh;
+}
+
+body .header .titulo {
+    margin-left: 10px;
+    font-size: 40px;
+    font-weight: 800;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+body .header .titulo span {
+    font-size: 40px;
+    color: #39FF84;
+    font-weight: 800;
+}
+
+body .header .titulo:hover {
+    transform: scale(1.1);
+}
+
+body .header .menu{
+    width: 100%;
+    height: 50%;
+    margin: 10px 0 10px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    
+}
+
+body .header .menu .botton-menu {
+    font-size: 18px;
+    margin-right: 40px;
+    font-weight: 500;
+    color: white;
+    transition: 0.3s ease;
+    margin: 0 10 0 10px;
+    cursor: pointer;
+}
+
+body .header .menu .botton-menu a {
+    text-decoration: none;
+    color: white;
+}
+
+body .header .menu .botton-menu a:hover {
+    color: #39FF84;
+}
+  
+  /*------------------------*/
+body .contact{
+    /* border: 1px solid #17d3f4; */
+    display: grid;
+    place-items: center;
+    width: 100%;
+    height: 100%;
+    
+}
+
+body .contact h2 {
+    font-size: 40px;
+    font-weight: 800;
+    margin: 10px 100px;
+    color: #175AF4;
+    text-align: center;
+    /* border: 1px solid #17d3f4; */
+}
+
+body .contact p {
+    font-size: 18px;
+    font-weight: 500;
+    color: #000000;
+    text-align: center;
+    /* border: 1px solid #17d3f4; */
+    margin: 10px 100px;
+}
+
+body .contact .contact-info img {
+    width: 400px;
+    height: 400px;
+}
+
+body .contact .contact-info {
+    /* border: 1px solid #175AF4; */
+    display: grid;
+    place-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+body .contact .contact-info .descripcion {
+    border: 1px solid #f41717;
+    display: grid;
+    place-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+body .contact .contactForm {
+    /* background-color: #1759f45f; */
+    display: grid;
+    place-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+body .contact .contactForm  input, textarea {
+    /* background: #39FF84;
+    border-color: #39FF84; */
+    color: #004cff;
+    display: block;
+    padding: 10px;
+    margin: 10px;
+    width: 500px;
+    height: 50px;
+    border-radius: 5px;
+    font-weight: 500;
+}
+
+/* button */ 
+button {
+    --color: #175AF4;
+    font-family: inherit;
+    display: inline-block;
+    width: 8em;
+    height: 2.6em;
+    line-height: 2.5em;
+    margin: 20px;
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+    border: 2px solid var(--color);
+    transition: color 0.5s;
+    z-index: 1;
+    font-size: 17px;
+    border-radius: 6px;
+    font-weight: 500;
+    color: var(--color);
+  }
+  
+  button:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    background: var(--color);
+    height: 150px;
+    width: 200px;
+    border-radius: 50%;
+  }
+  
+  button:hover {
+    color: #fff;
+  }
+  
+  button:before {
+    top: 100%;
+    left: 100%;
+    transition: all 0.7s;
+  }
+  
+  button:hover:before {
+    top: -30px;
+    left: -30px;
+  }
+  
+  button:active:before {
+    background: #004cff;
+    transition: background 0s;
+  }
+  

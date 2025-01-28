@@ -60,7 +60,12 @@ body .header .menu .botton-menu {
     cursor: pointer;
 }
 
-body .header .menu .botton-menu:hover {
+body .header .menu .botton-menu a {
+    text-decoration: none;
+    color: white;
+}
+
+body .header .menu .botton-menu a:hover {
     color: #39FF84;
 }
 
